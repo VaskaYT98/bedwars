@@ -1,0 +1,4 @@
+messages:
+  join: "&aYou joined the arena"
+  leave: "&cYou left the arena"
+  not_player: "&cOnly players can run this command"

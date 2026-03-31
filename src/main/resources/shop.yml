@@ -1,0 +1,671 @@
+default-upgrades-settings:
+  menu-size: 45
+  menu-content:
+  - upgrade-swords,10
+  - upgrade-armor,11
+  - upgrade-miner,12
+  - upgrade-forge,13
+  - upgrade-heal-pool,14
+  - upgrade-dragon,15
+  - category-traps,16
+  - separator-glass,18,19,20,21,22,23,24,25,26
+  - trap-slot-first,30
+  - trap-slot-second,31
+  - trap-slot-third,32
+  trap-start-price: 1
+  trap-increment-price: 1
+  trap-currency: diamond
+  trap-queue-limit: 3
+upgrade-swords:
+  tier-1:
+    cost: 4
+    currency: diamond
+    display-item:
+      material: IRON_SWORD
+      data: 0
+      amount: 1
+      enchanted: false
+    receive:
+    - 'enchant-item: DAMAGE_ALL,1,sword'
+upgrade-armor:
+  tier-1:
+    currency: diamond
+    cost: 2
+    display-item:
+      material: IRON_CHESTPLATE
+      data: 0
+      amount: 1
+      enchanted: false
+    receive:
+    - 'enchant-item: PROTECTION_ENVIRONMENTAL,1,armor'
+  tier-2:
+    currency: diamond
+    cost: 4
+    display-item:
+      material: IRON_CHESTPLATE
+      data: 0
+      amount: 2
+      enchanted: false
+    receive:
+    - 'enchant-item: PROTECTION_ENVIRONMENTAL,2,armor'
+  tier-3:
+    currency: diamond
+    cost: 8
+    display-item:
+      material: IRON_CHESTPLATE
+      data: 0
+      amount: 3
+      enchanted: false
+    receive:
+    - 'enchant-item: PROTECTION_ENVIRONMENTAL,3,armor'
+  tier-4:
+    currency: diamond
+    cost: 16
+    display-item:
+      material: IRON_CHESTPLATE
+      data: 0
+      amount: 4
+      enchanted: false
+    receive:
+    - 'enchant-item: PROTECTION_ENVIRONMENTAL,4,armor'
+upgrade-miner:
+  tier-1:
+    currency: diamond
+    cost: 2
+    display-item:
+      material: GOLDEN_PICKAXE
+      data: 0
+      amount: 1
+      enchanted: false
+    receive:
+    - 'player-effect: FAST_DIGGING,0,0,team'
+  tier-2:
+    currency: diamond
+    cost: 4
+    display-item:
+      material: GOLDEN_PICKAXE
+      data: 0
+      amount: 2
+      enchanted: false
+    receive:
+    - 'player-effect: FAST_DIGGING,1,0,team'
+upgrade-forge:
+  tier-1:
+    currency: diamond
+    cost: 2
+    display-item:
+      material: FURNACE
+      data: 0
+      amount: 1
+      enchanted: false
+    receive:
+    - 'generator-edit: iron,2.0,2,41'
+    - 'generator-edit: gold,3.0,1,14'
+  tier-2:
+    currency: diamond
+    cost: 4
+    display-item:
+      material: FURNACE
+      data: 0
+      amount: 2
+      enchanted: false
+    receive:
+    - 'generator-edit: iron,1.0,2,48'
+    - 'generator-edit: gold,3.0,2,21'
+  tier-3:
+    currency: diamond
+    cost: 6
+    display-item:
+      material: FURNACE
+      data: 0
+      amount: 3
+      enchanted: false
+    receive:
+    - 'generator-edit: iron,1.0,2,64'
+    - 'generator-edit: gold,3.0,2,29'
+    - 'generator-edit: emerald,10.0,1,10'
+  tier-4:
+    currency: diamond
+    cost: 8
+    display-item:
+      material: FURNACE
+      data: 0
+      amount: 4
+      enchanted: false
+    receive:
+    - 'generator-edit: iron,1.0,4,120'
+    - 'generator-edit: gold,2.0,4,80'
+    - 'generator-edit: emerald,10.0,2,20'
+upgrade-heal-pool:
+  tier-1:
+    currency: diamond
+    cost: 1
+    display-item:
+      material: BEACON
+      data: 0
+      amount: 1
+      enchanted: false
+    receive:
+    - 'player-effect: REGENERATION,1,0,base'
+upgrade-dragon:
+  tier-1:
+    currency: diamond
+    cost: 5
+    display-item:
+      material: DRAGON_EGG
+      data: 0
+      amount: 1
+      enchanted: false
+    receive:
+    - 'dragon: 2'
+category-traps:
+  display-item:
+    material: LEATHER
+    data: 0
+    amount: 1
+    enchanted: false
+  category-content:
+  - base-trap-1,10
+  - base-trap-2,11
+  - base-trap-3,12
+  - base-trap-4,13
+  - separator-back,31
+separator-glass:
+  on-click: ''
+  display-item:
+    material: GRAY_STAINED_GLASS_PANE
+    data: 7
+    amount: 1
+    enchanted: false
+trap-slot-first:
+  trap: 1
+  display-item:
+    material: GRAY_STAINED_GLASS
+    data: 8
+    amount: 1
+    enchanted: false
+trap-slot-second:
+  trap: 2
+  display-item:
+    material: GRAY_STAINED_GLASS
+    data: 8
+    amount: 2
+    enchanted: false
+trap-slot-third:
+  trap: 3
+  display-item:
+    material: GRAY_STAINED_GLASS
+    data: 8
+    amount: 3
+    enchanted: false
+base-trap-1:
+  display-item:
+    material: TRIPWIRE_HOOK
+    data: 0
+    amount: 1
+    enchanted: false
+  receive:
+  - 'player-effect: BLINDNESS,1,5,enemy'
+  - 'player-effect: SLOW,1,5,enemy'
+base-trap-2:
+  display-item:
+    material: FEATHER
+    data: 0
+    amount: 1
+    enchanted: false
+  receive:
+  - 'player-effect: SPEED,1,15,base'
+base-trap-3:
+  display-item:
+    material: REDSTONE_TORCH
+    data: 0
+    amount: 1
+    enchanted: false
+  custom-announce: true
+  receive:
+  - 'remove-effect: INVISIBILITY,enemy'
+base-trap-4:
+  display-item:
+    material: IRON_PICKAXE
+    data: 0
+    amount: 1
+    enchanted: false
+  receive:
+  - 'player-effect: SLOW_DIGGING,1,15,enemy'
+separator-back:
+  on-click:
+    player:
+    - ''
+    console:
+    - ''
+  display-item:
+    material: ARROW
+    data: 0
+    amount: 1
+    enchanted: false
+
+
+
+
+
+
+
+
+
+
+
+# Shop with quick buy and tiers
+
+shop-settings:
+  quick-buy-category:
+    material: NETHER_STAR
+    amount: 1
+    data: 0
+    enchanted: false
+  quick-buy-empty-item:
+    material: RED_STAINED_GLASS_PANE
+    amount: 1
+    data: 4
+    enchanted: false
+  regular-separator-item:
+    material: GRAY_STAINED_GLASS_PANE
+    amount: 1
+    data: 7
+    enchanted: false
+  selected-separator-item:
+    material: GREEN_STAINED_GLASS_PANE
+    amount: 1
+    data: 13
+    enchanted: false
+shop-specials:
+  silverfish:
+    enable: true
+    remove-invisibility-on-attack: false
+    material: SNOWBALL
+    data: 0
+    health: 8.0
+    damage: 4.0
+    speed: 0.25
+    despawn: 15
+    path-finding-ticks: 20
+  iron-golem:
+    enable: true
+    remove-invisibility-on-attack: false
+    material: HORSE_SPAWN_EGG
+    data: 0
+    health: 100.0
+    despawn: 240
+    speed: 0.25
+    path-finding-ticks: 20
+  tower:
+    enable: true
+    material: CHEST
+quick-buy-defaults:
+  element1:
+    path: blocks-category.category-content.wool
+    slot: 19
+  element2:
+    path: melee-category.category-content.stone-sword
+    slot: 20
+  element3:
+    path: armor-category.category-content.chainmail
+    slot: 21
+  element4:
+    path: ranged-category.category-content.bow1
+    slot: 23
+  element5:
+    path: potions-category.category-content.speed-potion
+    slot: 24
+  element6:
+    path: utility-category.category-content.tnt
+    slot: 25
+  element7:
+    path: blocks-category.category-content.wood
+    slot: 28
+  element8:
+    path: melee-category.category-content.iron-sword
+    slot: 29
+  element9:
+    path: armor-category.category-content.iron-armor
+    slot: 30
+  element10:
+    path: tools-category.category-content.shears
+    slot: 31
+  element11:
+    path: ranged-category.category-content.arrow
+    slot: 32
+  element12:
+    path: potions-category.category-content.jump-potion
+    slot: 33
+  element13:
+    path: utility-category.category-content.water-bucket
+    slot: 34
+blocks-category:
+  category-slot: 1
+  category-item:
+    material: ORANGE_TERRACOTTA
+    data: 1
+    amount: 1
+    enchanted: false
+  category-content:
+    wool:
+      content-settings:
+        content-slot: 19
+        is-permanent: false
+        is-downgradable: false
+      content-tiers:
+        tier1:
+          tier-item:
+            material: WHITE_WOOL
+            data: 0
+            amount: 16
+            enchanted: false
+          tier-settings:
+            cost: 4
+            currency: iron
+          buy-items:
+            wool:
+              material: WHITE_WOOL
+              data: 0
+              amount: 16
+    clay:
+      content-settings:
+        content-slot: 20
+        is-permanent: false
+        is-downgradable: false
+      content-tiers:
+        tier1:
+          tier-item:
+            material: ORANGE_TERRACOTTA
+            data: 1
+            amount: 16
+            enchanted: false
+          tier-settings:
+            cost: 12
+            currency: iron
+          buy-items:
+            clay:
+              material: ORANGE_TERRACOTTA
+              data: 1
+              amount: 16
+    glass:
+      content-settings:
+        content-slot: 21
+        is-permanent: false
+        is-downgradable: false
+      content-tiers:
+        tier1:
+          tier-item:
+            material: GLASS
+            data: 0
+            amount: 4
+            enchanted: false
+          tier-settings:
+            cost: 12
+            currency: iron
+          buy-items:
+            glass:
+              material: GLASS
+              data: 0
+              amount: 4
+    stone:
+      content-settings:
+        content-slot: 22
+        is-permanent: false
+        is-downgradable: false
+      content-tiers:
+        tier1:
+          tier-item:
+            material: END_STONE
+            data: 0
+            amount: 16
+            enchanted: false
+          tier-settings:
+            cost: 24
+            currency: iron
+          buy-items:
+            stone:
+              material: END_STONE
+              data: 0
+              amount: 16
+    ladder:
+      content-settings:
+        content-slot: 23
+        is-permanent: false
+        is-downgradable: false
+      content-tiers:
+        tier1:
+          tier-item:
+            material: LADDER
+            data: 0
+            amount: 16
+            enchanted: false
+          tier-settings:
+            cost: 4
+            currency: iron
+          buy-items:
+            ladder:
+              material: LADDER
+              data: 0
+              amount: 16
+    wood:
+      content-settings:
+        content-slot: 24
+        is-permanent: false
+        is-downgradable: false
+      content-tiers:
+        tier1:
+          tier-item:
+            material: OAK_WOOD
+            data: 0
+            amount: 16
+            enchanted: false
+          tier-settings:
+            cost: 4
+            currency: gold
+          buy-items:
+            wood:
+              material: OAK_WOOD
+              data: 0
+              amount: 16
+    obsidian:
+      content-settings:
+        content-slot: 25
+        is-permanent: false
+        is-downgradable: false
+      content-tiers:
+        tier1:
+          tier-item:
+            material: OBSIDIAN
+            data: 0
+            amount: 4
+            enchanted: false
+          tier-settings:
+            cost: 4
+            currency: emerald
+          buy-items:
+            obsidian:
+              material: OBSIDIAN
+              data: 0
+              amount: 4
+melee-category:
+  category-slot: 2
+  category-item:
+    material: GOLDEN_SWORD
+    data: 0
+    amount: 1
+    enchanted: false
+  category-content:
+    stone-sword:
+      content-settings:
+        content-slot: 19
+        is-permanent: false
+        is-downgradable: false
+        is-unbreakable: true
+      content-tiers:
+        tier1:
+          tier-item:
+            material: STONE_SWORD
+            data: 0
+            amount: 1
+            enchanted: false
+          tier-settings:
+            cost: 10
+            currency: iron
+          buy-items:
+            sword:
+              material: STONE_SWORD
+              data: 0
+              amount: 1
+    iron-sword:
+      content-settings:
+        content-slot: 20
+        is-permanent: false
+        is-downgradable: false
+        is-unbreakable: true
+      content-tiers:
+        tier1:
+          tier-item:
+            material: IRON_SWORD
+            data: 0
+            amount: 1
+            enchanted: false
+          tier-settings:
+            cost: 7
+            currency: gold
+          buy-items:
+            sword:
+              material: IRON_SWORD
+              data: 0
+              amount: 1
+    diamond-sword:
+      content-settings:
+        content-slot: 21
+        is-permanent: false
+        is-downgradable: false
+        is-unbreakable: true
+      content-tiers:
+        tier1:
+          tier-item:
+            material: DIAMOND_SWORD
+            data: 0
+            amount: 1
+            enchanted: false
+          tier-settings:
+            cost: 4
+            currency: emerald
+          buy-items:
+            sword:
+              material: DIAMOND_SWORD
+              data: 0
+              amount: 1
+    stick:
+      content-settings:
+        content-slot: 22
+        is-permanent: false
+        is-downgradable: false
+        is-unbreakable: true
+      content-tiers:
+        tier1:
+          tier-item:
+            material: STICK
+            data: 0
+            amount: 1
+            enchanted: true
+          tier-settings:
+            cost: 10
+            currency: gold
+          buy-items:
+            stick:
+              material: STICK
+              data: 0
+              amount: 1
+              enchants: KNOCKBACK 1
+armor-category:
+  category-slot: 3
+  category-item:
+    material: CHAINMAIL_BOOTS
+    data: 0
+    amount: 1
+    enchanted: false
+  category-content:
+    chainmail:
+      content-settings:
+        content-slot: 19
+        is-permanent: true
+        is-downgradable: false
+      content-tiers:
+        tier1:
+          tier-item:
+            material: CHAINMAIL_BOOTS
+            data: 0
+            amount: 1
+            enchanted: false
+          tier-settings:
+            cost: 40
+            currency: iron
+          buy-items:
+            boots:
+              material: CHAINMAIL_BOOTS
+              data: 0
+              amount: 1
+              auto-equip: true
+            leggings:
+              material: CHAINMAIL_LEGGINGS
+              data: 0
+              amount: 1
+              auto-equip: true
+    iron-armor:
+      content-settings:
+        content-slot: 20
+        is-permanent: true
+        is-downgradable: false
+        weight: 1
+      content-tiers:
+        tier1:
+          tier-item:
+            material: IRON_BOOTS
+            data: 0
+            amount: 1
+            enchanted: false
+          tier-settings:
+            cost: 12
+            currency: gold
+          buy-items:
+            boots:
+              material: IRON_BOOTS
+              data: 0
+              amount: 1
+              auto-equip: true
+            leggings:
+              material: IRON_LEGGINGS
+              data: 0
+              amount: 1
+              auto-equip: true
+    diamond-armor:
+      content-settings:
+        content-slot: 21
+        is-permanent: true
+        is-downgradable: false
+        weight: 2
+      content-tiers:
+        tier1:
+          tier-item:
+            material: DIAMOND_BOOTS
+            data: 0
+            amount: 1
+            enchanted: false
+          tier-settings:
+            cost: 6
+            currency: emerald
+          buy-items:
+            boots:
+              material: DIAMOND_BOOTS
+              data: 0
+              amount: 1
+              auto-equip: true
+            leggings:
+              material: DIAMOND_LEGGINGS
+              data: 0
+              amount: 1
+              auto-equip: true

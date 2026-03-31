@@ -1,0 +1,23 @@
+name: BedWars
+main: org.vaska.bedwars.Bedwars
+version: 1.0.0
+api-version: 1.20
+author: vaska
+depend: [PlaceholderAPI]
+commands:
+  bw:
+    description: Join BedWars
+    usage: /bw join
+  party:
+    description: Party commands
+    usage: /party invite <player>
+permissions:
+  bedwars.admin:
+    description: Admin permission
+    default: op
+name: bedwars
+version: '1.0-SNAPSHOT'
+main: org.vaska.bedwars.Bedwars
+api-version: '1.21'
+authors: [ VaskaYT98 ]
+description: bedwars

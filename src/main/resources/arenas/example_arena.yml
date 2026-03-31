@@ -1,0 +1,11 @@
+name: example_arena
+world_folder: example_world
+max_players: 16
+teams: 4
+generator_speed: 1.0
+respawn_time: 5
+regions:
+	play_area:
+		world: example_world
+		min: [ -16, 0, -16 ]
+		max: [ 16, 256, 16 ]

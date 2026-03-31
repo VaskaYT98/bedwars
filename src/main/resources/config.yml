@@ -1,0 +1,23 @@
+# BedWars main configuration
+lobby-world: lobby
+max-arenas-loaded: 6
+database:
+  type: sqlite
+  sqlite-file: bedwars.db
+npcs:
+  provider: auto # options: auto, citizens, customnps, znpc, znpc+, builtin
+messages:
+  party:
+    joined: "&aYou joined the party"
+    left: "&aYou left the party"
+    disbanded: "&cParty disbanded"
+    not_in: "&cYou are not in a party"
+    no_invite: "&cNo invite found from that player"
+    only_leader: "&cOnly the leader can disband the party"
+  matchmaking:
+    party_joined_arena: "&aParty joined arena {arena} on team {team}"
+    created_and_joined_arena: "&aCreated and joined arena {arena} on team {team}"
+    joined_arena: "&aJoined arena {arena} on team {team}"
+  game:
+    starting: "&eGame starting in {seconds} seconds!"
+    started: "&cGame started!"
